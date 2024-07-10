@@ -8,7 +8,6 @@ OrderItem.propTypes = {
 };
 function OrderItem({ item, isLoadingIngredients, ingredients }) {
   const { quantity, name, totalPrice } = item;
-  console.log(ingredients);
 
   return (
     <li className="space-y-1 py-3">

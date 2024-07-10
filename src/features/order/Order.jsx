@@ -3,6 +3,7 @@ import Utils from '@/utils';
 import OrderItem from './OrderItem';
 import { getOrder } from '@/services/apiRestaurant';
 import { useEffect } from 'react';
+import UpdateOrder from './UpdateOrder';
 
 // Test ID: IIDSAT
 export async function orderLoader({ params }) {
@@ -89,6 +90,7 @@ function Order() {
           {Utils.number.formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
+      {!priority && <UpdateOrder />}
     </div>
   );
 }
